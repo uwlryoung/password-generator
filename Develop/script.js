@@ -18,10 +18,13 @@ function writePassword() {
     var characterSets =[];
     var passwordShell =[];
 
-    //Asks for the length a password the user wants and converts it into a number
-    var userInputPasswordLength = prompt("How long do you want your password to be? Choose a number between 8 and 128");
-    userInputPasswordLength = Number(userInputPasswordLength);
-
+    //Asks for the length a password the user wants and converts it into a number. The While loop enforces that it must be between 8 and 128 characters (inclusively).
+    var userInputPasswordLength = 0;    
+    while ((userInputPasswordLength < 8) || (userInputPasswordLength > 128)) {
+      userInputPasswordLength = prompt("How long do you want your password to be? Choose a number between 8 and 128");
+      userInputPasswordLength = Number(userInputPasswordLength);
+    }
+    
     //Confirmations of what user would like to have in password as characters.
     var userConfirmUppercase = confirm("Do you want your password to use UPPERCASE letters?");
     var userConfirmLowercase = confirm("Do you want your password to use lowercase letters?");
