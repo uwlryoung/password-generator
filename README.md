@@ -8,22 +8,22 @@ A web application that will make a randomized password between 8-128 characters 
 ### Screenshots and Steps
 Step 1: Click "Generate Password"
 
-![Password Generator](/assets/pass-generator.png)
+![Password Generator](/Assets/pass-generator.png)
 
 Step 2: Type a number between 8 - 128, this will be the password length
 
-![Password Generator](/assets/pass-length.png)
+![Password Generator](/Assets/pass-length.png)
 
 Step 3: Choose password validation criteria. Clicking "OK" will include those types of characters in the password. "Cancel" will exclude those characters from the passsword. 
 
-![Password Generator](/assets/uppercase.png)
-![Password Generator](/assets/lowercase.png)
-![Password Generator](/assets/numbers.png)
-![Password Generator](/assets/special.png)
+![Password Generator](/Assets/uppercase.png)
+![Password Generator](/Assets/lowercase.png)
+![Password Generator](/Assets/numbers.png)
+![Password Generator](/Assets/special.png)
 
 Step 4: The password is generated. (55 characters in example). Copy and paste. 
 
-![Password Generator](/assets/password.png)
+![Password Generator](/Assets/password.png)
 
 
 ## Usage
