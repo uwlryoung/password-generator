@@ -24,12 +24,25 @@ function writePassword() {
       userInputPasswordLength = prompt("How long do you want your password to be? Choose a number between 8 and 128");
       userInputPasswordLength = Number(userInputPasswordLength);
     }
-    
-    //Confirmations of what user would like to have in password as characters.
-    var userConfirmUppercase = confirm("Do you want your password to use UPPERCASE letters?");
-    var userConfirmLowercase = confirm("Do you want your password to use lowercase letters?");
-    var userConfirmNumbers = confirm("Do you want your password to use numerical values?");
-    var userConfirmSpecialCharacters = confirm("Do you want your password to use special characters?");
+
+
+    //This alert is used to help users understand that "OK" and "Cancel" mean "Yes"/"No", respectively.
+    alert("The following prompts ask for the type of characters you would like to include in your password. Click 'OK' to include the character type in your password, or click 'Cancel' to not include it.");
+
+    //Confirmations of what user would like to have in password as characters. While loop ensures that at least one type is selected.
+    var characterType = 0;
+    while (characterType === 0) {
+      var userConfirmUppercase = confirm("Do you want your password to use UPPERCASE letters?");
+      var userConfirmLowercase = confirm("Do you want your password to use lowercase letters?");
+      var userConfirmNumbers = confirm("Do you want your password to use numerical values?");
+      var userConfirmSpecialCharacters = confirm("Do you want your password to use special characters?");
+      
+      if ((userConfirmUppercase === true) || (userConfirmLowercase === true) || (userConfirmNumbers === true) || (userConfirmSpecialCharacters === true)) {
+        characterType++; 
+      } else {
+        alert("Please select at least one type of character by pressing 'OK' in at least one of the following prompts");
+      }
+    }
 
     //If confirmation is true, it will be added to the "characterSets" array
     if (userConfirmUppercase === true) {
