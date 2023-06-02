@@ -7,7 +7,6 @@ var lowercaseAlphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n'
 var digits = [0,1,2,3,4,5,6,7,8,9];
 var specialCharacters =['!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[','\\',']','^','_','`','{','|','}','~'];
 
-
 // Write password to the #password input
 function writePassword() {
 
@@ -18,16 +17,15 @@ function writePassword() {
     var characterSets =[];
     var passwordShell =[];
 
-    //Asks for the length a password the user wants and converts it into a number. The While loop enforces that it must be between 8 and 128 characters (inclusively).
+    //Asks for the length a password the user wants and converts it into a number. The While loop enforces that it must be between 8 and 128 characters (inclusively) and a number.
     var userInputPasswordLength = 0;    
-    while ((userInputPasswordLength < 8) || (userInputPasswordLength > 128)) {
+    while ((userInputPasswordLength < 8) || (userInputPasswordLength > 128) || (Number.isNaN(userInputPasswordLength))) {
       userInputPasswordLength = prompt("How long do you want your password to be? Choose a number between 8 and 128");
       userInputPasswordLength = Number(userInputPasswordLength);
     }
 
-
     //This alert is used to help users understand that "OK" and "Cancel" mean "Yes"/"No", respectively.
-    alert("The following prompts ask for the type of characters you would like to include in your password. Click 'OK' to include the character type in your password, or click 'Cancel' to not include it.");
+    alert("Generate a Password! In the next questions, click 'OK' to include the character type, or 'Cancel' to not include it! Happy generating!");
 
     //Confirmations of what user would like to have in password as characters. While loop ensures that at least one type is selected.
     var characterType = 0;

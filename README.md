@@ -35,6 +35,8 @@ N/A
 ### Useful Links
 [While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while) - While Loops came up when trying to search how to ask for users to redo the password length prompt 
 
+[isNaN Function (is not a number)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) - Using the isNaN() function was instrumental in making sure users can't enter in anything but a number. 
+
 ## Challenges To Work On / Future Updates to this Page
 - Be able to have the text automatically copied just by clicking on it. 
 
